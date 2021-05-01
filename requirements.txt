@@ -1,1 +1,6 @@
-
+cv2 == 4.5.1.48
+numpy == 1.20.2
+matplotlib == 3.4.1
+imageio == 2.9.0
+imutils == 0.5.4
+argparse == 3.2.0

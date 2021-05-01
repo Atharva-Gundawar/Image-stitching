@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import imageio
 import imutils
-import argpharser
+import argparse
 
 feature_extractor = 'orb' # one of 'sift', 'surf', 'brisk', 'orb'
 feature_matching = 'bf'
