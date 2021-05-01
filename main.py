@@ -8,6 +8,11 @@ import argpharser
 feature_extractor = 'orb' # one of 'sift', 'surf', 'brisk', 'orb'
 feature_matching = 'bf'
 
+ap = argparse.ArgumentParser()
+ap.add_argument("-f", "--first",type=str, required=True,help="path to first img")
+ap.add_argument("-s", "--second", type=str, required=True,help="path to secons img")
+args = vars(ap.parse_args())
+
 trainImg = imageio.imread('http://www.ic.unicamp.br/~helio/imagens_registro/foto1A.jpg')
 trainImg_gray = cv2.cvtColor(trainImg, cv2.COLOR_RGB2GRAY)
 
