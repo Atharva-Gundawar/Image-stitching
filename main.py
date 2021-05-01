@@ -13,10 +13,10 @@ ap.add_argument("-f", "--first",type=str, required=True,help="path to first img"
 ap.add_argument("-s", "--second", type=str, required=True,help="path to secons img")
 args = vars(ap.parse_args())
 
-trainImg = imageio.imread('http://www.ic.unicamp.br/~helio/imagens_registro/foto1A.jpg')
+trainImg = imageio.imread(args['first'])
 trainImg_gray = cv2.cvtColor(trainImg, cv2.COLOR_RGB2GRAY)
 
-queryImg = imageio.imread('http://www.ic.unicamp.br/~helio/imagens_registro/foto1B.jpg')
+queryImg = imageio.imread(args['second'])
 queryImg_gray = cv2.cvtColor(queryImg, cv2.COLOR_RGB2GRAY)
 
 fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, constrained_layout=False, figsize=(16,9))
